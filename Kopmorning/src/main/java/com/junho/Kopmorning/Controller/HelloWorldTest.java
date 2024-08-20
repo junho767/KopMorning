@@ -9,4 +9,8 @@ public class HelloWorldTest {
     public String test(){
         return "Hello, World!! + test";
     }
+    @GetMapping("/api/check")
+    public String check(){
+        return "Success";
+    }
 }
