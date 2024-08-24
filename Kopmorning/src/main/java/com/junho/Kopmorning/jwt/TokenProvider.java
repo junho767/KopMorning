@@ -48,7 +48,7 @@ public class TokenProvider {
                 .setSubject(authentication.getName())
                 .claim(AUTHORITIES_KEY, authorities)
                 .setExpiration(tokenExpiresIn)
-                .signWith(key, SignatureAlgorithm.HS512)
+                .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
 
         return TokenDto.builder()
@@ -95,7 +95,7 @@ public class TokenProvider {
         return false;
     }
     // 문자열 형태 accessToken 을 Claims 형태로 변환하는 메서드
-    // 이를 통해 권한 정보의 유무 체크 가능
+    // 이를 통해 권한 정보의 유무 체크
     private Claims parseClaims(String accessToken) {
         try {
             return Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(accessToken).getBody();
