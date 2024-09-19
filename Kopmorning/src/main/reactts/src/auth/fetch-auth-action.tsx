@@ -28,12 +28,12 @@ const fetchAuth = async (fetchData: FetchData) => {
 
     if(response && response.data.error) {
       console.log((response.data as LoginFailType).error);
-      alert("Wrong ID or Password");
+      alert("잘못된 방식 입니다.");
       return null;
     }
 
     if (!response) {
-      alert("false!");
+      alert("잘못된 방식 입니다.");
       return null;
     }
 
@@ -43,9 +43,12 @@ const fetchAuth = async (fetchData: FetchData) => {
 
     if (axios.isAxiosError(err)) {
       const serverError = err as AxiosError<ServerError>;
-      if (serverError && serverError.response) {
+      if (serverError.response && serverError.response.status === 401){
+        alert("아이디 or 비밀번호가 틀립니다.");
+        return null;
+      }
+      else if (serverError && serverError.response) {
         console.log(serverError.response.data);
-        alert("failed!");
         return null;
       }
     }

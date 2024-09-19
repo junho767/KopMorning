@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #4caf50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+  color: #ffeb3b;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+button:active {
+  background-color: #ff5722;
+  border-color: #ff5722;
+}

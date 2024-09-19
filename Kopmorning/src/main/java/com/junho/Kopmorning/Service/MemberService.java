@@ -23,8 +23,8 @@ public class MemberService {
     }
 
     @Transactional
-    public MemberResponseDto changeMemberNickname(String email, String nickname){
-        Member member = memberRepository.findByEmail(email).orElseThrow(()->new RuntimeException("등록된 사용자가 아닙니다."));
+    public MemberResponseDto changeMemberNickname(String nickname){
+        Member member = memberRepository.findById(SecurityUtil.getCurrentMemberId()).orElseThrow(()->new RuntimeException("올바른 접근이 아닙니다."));
         member.setNickname(nickname);
         return MemberResponseDto.of(memberRepository.save(member));
     }

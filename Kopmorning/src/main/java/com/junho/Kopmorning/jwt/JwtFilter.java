@@ -8,14 +8,16 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.StringUtils;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
 @RequiredArgsConstructor // final 또는 @NonNull로 선언된 모든 필드를 포함하는 생성자를 자동으로 생성해줍니다.
-public class JwtFilter {
+public class JwtFilter extends OncePerRequestFilter {
     public static final String AUTHORIZATION_HEADER = "Authorization";
     public static final String BEARER_PREFIX = "Bearer";
     private final TokenProvider tokenProvider;
+
 
     // request 헤더에서 토큰 정보를 가져옴.
     private String resolveToken(HttpServletRequest request){

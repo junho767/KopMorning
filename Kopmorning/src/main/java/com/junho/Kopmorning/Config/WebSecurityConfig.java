@@ -2,7 +2,9 @@ package com.junho.Kopmorning.Config;
 
 import com.junho.Kopmorning.jwt.JwtAccessDeniedHandler;
 import com.junho.Kopmorning.jwt.JwtAuthenticationEntryPoint;
+import com.junho.Kopmorning.jwt.JwtFilter;
 import com.junho.Kopmorning.jwt.TokenProvider;
+import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,11 +14,13 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Configuration
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity
+//@EnableWebSecurity(debug = true)
 @Component
 public class WebSecurityConfig {
     private final TokenProvider tokenProvider;
@@ -29,6 +33,7 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        JwtFilter customFilter = new JwtFilter(tokenProvider);
         // csrf 설정
         http
                 .csrf((auth)->auth.disable());
@@ -41,23 +46,23 @@ public class WebSecurityConfig {
         // 경로별 인가 작업
         http
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/auth/**").permitAll());
-        http
-                .authorizeHttpRequests((auth) -> auth
-                        .anyRequest().authenticated());
+                        .requestMatchers("/","/**").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
+//                        .anyRequest().authenticated() /// 그 외의 모든 요청에 대해 인증 요구
+                );
         // 인증되지 않은 사용자가 보호된 리소스에 접근하려고 할 때 처리방법
         http.exceptionHandling((auth)->auth
                 .authenticationEntryPoint(jwtAuthenticationEntryPoint));
         // 인증된 사용자가 충분한 권한이 없을 때
         http.exceptionHandling((auth)->auth
                 .accessDeniedHandler(jwtAccessDeniedHandler));
-
         // 세션 설정
         http
                 .sessionManagement((session) -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-
-
+        // 필터
+        http
+                .addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 }
