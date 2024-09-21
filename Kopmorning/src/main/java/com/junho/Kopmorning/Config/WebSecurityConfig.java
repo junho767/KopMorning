@@ -4,7 +4,6 @@ import com.junho.Kopmorning.jwt.JwtAccessDeniedHandler;
 import com.junho.Kopmorning.jwt.JwtAuthenticationEntryPoint;
 import com.junho.Kopmorning.jwt.JwtFilter;
 import com.junho.Kopmorning.jwt.TokenProvider;
-import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
