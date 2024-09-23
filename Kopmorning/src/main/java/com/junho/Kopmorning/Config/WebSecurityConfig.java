@@ -45,9 +45,8 @@ public class WebSecurityConfig {
         // 경로별 인가 작업
         http
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/","/**").permitAll()
-                        .requestMatchers("/auth/**").permitAll()
-//                        .anyRequest().authenticated() /// 그 외의 모든 요청에 대해 인증 요구
+                        .requestMatchers("/","/auth/**","/article/**","/recommend/**","/comment/**").permitAll()
+                        .anyRequest().authenticated() /// 그 외의 모든 요청에 대해 인증 요구
                 );
         // 인증되지 않은 사용자가 보호된 리소스에 접근하려고 할 때 처리방법
         http.exceptionHandling((auth)->auth

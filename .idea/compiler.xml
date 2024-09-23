@@ -13,6 +13,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Kopmorning.Kopmorning.main" target="17" />
+      <module name="Kopmorning.Kopmorning.querydsl" target="17" />
       <module name="Kopmorning.Kopmorning.test" target="17" />
     </bytecodeTargetLevel>
   </component>

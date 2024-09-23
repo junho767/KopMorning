@@ -2,6 +2,9 @@ package com.junho.Kopmorning.Domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
@@ -12,6 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor // 모든 필드를 파라미터로 받는 생성자를 자동 생성
 @NoArgsConstructor // 파라미터가 없는 기본 생성자를 자동 생성
 @Table(name="user")
+@EntityListeners(AuditingEntityListener.class)
 public class Member {
 
     @Id
@@ -20,15 +24,25 @@ public class Member {
 
     @Column(nullable = false)
     private String email;
+
     @Column(nullable = false)
     private String password;
+
     @Column(nullable = false)
     private String nickname;
+
     @Enumerated(EnumType.STRING) // Enum 값이 DB에서 문자열 형태로 저장되게 함.
     private Role role;
+
+    @CreatedDate
+    @Column
     private LocalDateTime createAt;
+
+    @LastModifiedDate
+    @Column
     private LocalDateTime updateAt;
-    private LocalDateTime lastLoginAt;
+
+//    private LocalDateTime lastLoginAt;
 
     public Member(Long id,String email,String password,String nickname,LocalDateTime createAt,LocalDateTime updateAt,LocalDateTime lastLoginAt,Role role){
         this.id = id;
@@ -38,6 +52,6 @@ public class Member {
         this.role = role;
         this.createAt = createAt;
         this.updateAt = updateAt;
-        this.lastLoginAt = lastLoginAt;
+//        this.lastLoginAt = lastLoginAt;
     }
 }
