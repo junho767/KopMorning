@@ -41,10 +41,23 @@ public class Article {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @OneToMany(mappedBy = "article")
+    @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE) // CascadeType.REMOVE 는 부모 객체 삭제 시 하위 객체도 제거하게 함.
     private List<Comment> commentList = new LinkedList<>();
 
-    @OneToMany(mappedBy = "article")
+    @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
     private List<Comment> recommentList = new ArrayList<>();
+
+    public Article(String title, String content, Member member){
+        this.title = title;
+        this.content = content;
+        this.member = member;
+    }
+
+    public Article updateArticle(Article article, String title, String content){
+        article.setTitle(title);
+        article.setContent(content);
+
+        return article;
+    }
 }
 
