@@ -28,10 +28,12 @@ public class ArticleController {
         return ResponseEntity.ok(articleService.postArticle(requestDTO.getTitle(), requestDTO.getContent()));
     }
 
-    @GetMapping("/update")
-    public ResponseEntity<ArticleResponseDTO> getUpdateArticle(@RequestParam(name = "id") Long id){
+    // 수정하기 위해, 이전에 쓰여졌던 데이터를 불러오는 컨트롤러이다.
+    @GetMapping("/change")
+    public ResponseEntity<ArticleResponseDTO> getChangeArticle(@RequestParam(name = "id") Long id){
         return ResponseEntity.ok(articleService.getArticle(id));
     }
+    // 수정
     @PutMapping("/")
     public ResponseEntity<ArticleResponseDTO> putUpdateArticle(@RequestBody UpdateArticleRequestDTO requestDTO){
         return ResponseEntity.ok(articleService.updateArticle(requestDTO.getId(), requestDTO.getTitle(), requestDTO.getContent()));

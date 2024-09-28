@@ -1,0 +1,318 @@
+2024-09-28T16:36:21.311+09:00  INFO 15928 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 15928 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T16:36:21.321+09:00  INFO 15928 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T16:36:21.403+09:00  INFO 15928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T16:36:21.403+09:00  INFO 15928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T16:36:22.277+09:00  INFO 15928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T16:36:22.289+09:00  INFO 15928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-09-28T16:36:23.976+09:00  INFO 15928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T16:36:23.999+09:00  INFO 15928 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T16:36:24.000+09:00  INFO 15928 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T16:36:24.080+09:00  INFO 15928 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T16:36:24.081+09:00  INFO 15928 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2676 ms
+2024-09-28T16:36:24.532+09:00  INFO 15928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T16:36:24.695+09:00  INFO 15928 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2c511d0e
+2024-09-28T16:36:24.697+09:00  INFO 15928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T16:36:24.761+09:00  INFO 15928 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T16:36:24.876+09:00  INFO 15928 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T16:36:24.939+09:00  INFO 15928 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T16:36:25.470+09:00  INFO 15928 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T16:36:26.862+09:00  INFO 15928 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T16:36:26.971+09:00  INFO 15928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:36:27.094+09:00  WARN 15928 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Controller\ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'articleService' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Service\ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-28T16:36:27.095+09:00  INFO 15928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:36:27.103+09:00  INFO 15928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T16:36:27.108+09:00  INFO 15928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28T16:36:27.110+09:00  INFO 15928 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-28T16:36:27.133+09:00  INFO 15928 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-28T16:36:27.167+09:00 ERROR 15928 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.junho.Kopmorning.Service.ArticleService required a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' in your configuration.
+
+2024-09-28T16:39:44.122+09:00  INFO 4928 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 4928 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T16:39:44.125+09:00  INFO 4928 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T16:39:44.189+09:00  INFO 4928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T16:39:44.190+09:00  INFO 4928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T16:39:45.150+09:00  INFO 4928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T16:39:45.167+09:00  INFO 4928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-09-28T16:39:46.817+09:00  INFO 4928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T16:39:46.833+09:00  INFO 4928 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T16:39:46.834+09:00  INFO 4928 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T16:39:46.902+09:00  INFO 4928 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T16:39:46.902+09:00  INFO 4928 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2712 ms
+2024-09-28T16:39:47.328+09:00  INFO 4928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T16:39:47.468+09:00  INFO 4928 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@34218963
+2024-09-28T16:39:47.470+09:00  INFO 4928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T16:39:47.528+09:00  INFO 4928 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T16:39:47.606+09:00  INFO 4928 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T16:39:47.657+09:00  INFO 4928 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T16:39:48.087+09:00  INFO 4928 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T16:39:49.370+09:00  INFO 4928 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T16:39:49.476+09:00  INFO 4928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:39:49.590+09:00  WARN 4928 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Controller\ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'articleService' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Service\ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-28T16:39:49.592+09:00  INFO 4928 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:39:49.599+09:00  INFO 4928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T16:39:49.604+09:00  INFO 4928 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28T16:39:49.606+09:00  INFO 4928 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-28T16:39:49.629+09:00  INFO 4928 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-28T16:39:49.662+09:00 ERROR 4928 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.junho.Kopmorning.Service.ArticleService required a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' in your configuration.
+
+2024-09-28T16:51:52.700+09:00  INFO 4560 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 4560 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T16:51:52.703+09:00  INFO 4560 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T16:51:52.767+09:00  INFO 4560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T16:51:52.767+09:00  INFO 4560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T16:51:53.696+09:00  INFO 4560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T16:51:53.711+09:00  INFO 4560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-09-28T16:51:55.386+09:00  INFO 4560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T16:51:55.402+09:00  INFO 4560 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T16:51:55.403+09:00  INFO 4560 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T16:51:55.475+09:00  INFO 4560 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T16:51:55.475+09:00  INFO 4560 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2707 ms
+2024-09-28T16:51:55.925+09:00  INFO 4560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T16:51:56.071+09:00  INFO 4560 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3ed03f81
+2024-09-28T16:51:56.073+09:00  INFO 4560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T16:51:56.136+09:00  INFO 4560 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T16:51:56.226+09:00  INFO 4560 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T16:51:56.276+09:00  INFO 4560 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T16:51:56.737+09:00  INFO 4560 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T16:51:58.044+09:00  INFO 4560 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T16:51:58.160+09:00  INFO 4560 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:51:58.272+09:00  WARN 4560 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Controller\ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'articleService' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Service\ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-28T16:51:58.272+09:00  INFO 4560 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:51:58.277+09:00  INFO 4560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T16:51:58.283+09:00  INFO 4560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28T16:51:58.286+09:00  INFO 4560 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-28T16:51:58.321+09:00  INFO 4560 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-28T16:51:58.361+09:00 ERROR 4560 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.junho.Kopmorning.Service.ArticleService required a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' in your configuration.
+
+2024-09-28T16:53:11.031+09:00  INFO 17524 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 17524 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T16:53:11.034+09:00  INFO 17524 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T16:53:11.102+09:00  INFO 17524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T16:53:11.103+09:00  INFO 17524 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T16:53:12.086+09:00  INFO 17524 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T16:53:12.098+09:00  INFO 17524 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2024-09-28T16:53:13.630+09:00  INFO 17524 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T16:53:13.644+09:00  INFO 17524 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T16:53:13.645+09:00  INFO 17524 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T16:53:13.705+09:00  INFO 17524 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T16:53:13.706+09:00  INFO 17524 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2602 ms
+2024-09-28T16:53:14.240+09:00  INFO 17524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T16:53:14.373+09:00  INFO 17524 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7cdc2f95
+2024-09-28T16:53:14.375+09:00  INFO 17524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T16:53:14.429+09:00  INFO 17524 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T16:53:14.503+09:00  INFO 17524 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T16:53:14.547+09:00  INFO 17524 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T16:53:14.943+09:00  INFO 17524 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T16:53:16.191+09:00  INFO 17524 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T16:53:16.315+09:00  INFO 17524 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:53:16.415+09:00  WARN 17524 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Controller\ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'articleService' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Service\ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-28T16:53:16.415+09:00  INFO 17524 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:53:16.421+09:00  INFO 17524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T16:53:16.426+09:00  INFO 17524 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28T16:53:16.429+09:00  INFO 17524 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-28T16:53:16.452+09:00  INFO 17524 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-28T16:53:16.485+09:00 ERROR 17524 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.junho.Kopmorning.Service.ArticleService required a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' in your configuration.
+
+2024-09-28T16:53:54.223+09:00  INFO 19060 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 19060 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T16:53:54.227+09:00  INFO 19060 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T16:53:54.296+09:00  INFO 19060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T16:53:54.297+09:00  INFO 19060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T16:53:55.237+09:00  INFO 19060 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T16:53:55.252+09:00  INFO 19060 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-09-28T16:53:56.820+09:00  INFO 19060 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T16:53:56.834+09:00  INFO 19060 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T16:53:56.835+09:00  INFO 19060 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T16:53:56.909+09:00  INFO 19060 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T16:53:56.909+09:00  INFO 19060 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2612 ms
+2024-09-28T16:53:57.403+09:00  INFO 19060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T16:53:57.523+09:00  INFO 19060 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@46fcaf78
+2024-09-28T16:53:57.525+09:00  INFO 19060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T16:53:57.571+09:00  INFO 19060 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T16:53:57.633+09:00  INFO 19060 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T16:53:57.675+09:00  INFO 19060 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T16:53:58.066+09:00  INFO 19060 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T16:53:59.342+09:00  INFO 19060 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T16:53:59.457+09:00  INFO 19060 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:53:59.562+09:00  WARN 19060 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Controller\ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'articleService' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Service\ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-28T16:53:59.563+09:00  INFO 19060 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:53:59.568+09:00  INFO 19060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T16:53:59.573+09:00  INFO 19060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28T16:53:59.575+09:00  INFO 19060 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-28T16:53:59.602+09:00  INFO 19060 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-28T16:53:59.637+09:00 ERROR 19060 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.junho.Kopmorning.Service.ArticleService required a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' in your configuration.
+
+2024-09-28T16:55:23.196+09:00  INFO 15532 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 15532 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T16:55:23.198+09:00  INFO 15532 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T16:55:23.273+09:00  INFO 15532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T16:55:23.274+09:00  INFO 15532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T16:55:24.304+09:00  INFO 15532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T16:55:24.320+09:00  INFO 15532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-09-28T16:55:25.905+09:00  INFO 15532 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T16:55:25.920+09:00  INFO 15532 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T16:55:25.921+09:00  INFO 15532 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T16:55:25.995+09:00  INFO 15532 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T16:55:25.996+09:00  INFO 15532 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2720 ms
+2024-09-28T16:55:26.411+09:00  INFO 15532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T16:55:26.545+09:00  INFO 15532 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1529a9f8
+2024-09-28T16:55:26.547+09:00  INFO 15532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T16:55:26.602+09:00  INFO 15532 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T16:55:26.681+09:00  INFO 15532 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T16:55:26.724+09:00  INFO 15532 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T16:55:27.189+09:00  INFO 15532 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T16:55:28.381+09:00  INFO 15532 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T16:55:28.498+09:00  INFO 15532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:55:28.631+09:00  WARN 15532 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Controller\ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'articleService' defined in file [C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes\com\junho\Kopmorning\Service\ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-28T16:55:28.632+09:00  INFO 15532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:55:28.639+09:00  INFO 15532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T16:55:28.645+09:00  INFO 15532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28T16:55:28.647+09:00  INFO 15532 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-28T16:55:28.664+09:00  INFO 15532 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-28T16:55:28.694+09:00 ERROR 15532 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.junho.Kopmorning.Service.ArticleService required a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.junho.Kopmorning.Repository.ArticleRepository' in your configuration.
+
+2024-09-28T16:58:29.183+09:00  INFO 5496 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 5496 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T16:58:29.187+09:00  INFO 5496 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T16:58:29.259+09:00  INFO 5496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T16:58:29.260+09:00  INFO 5496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T16:58:30.705+09:00  INFO 5496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T16:58:30.807+09:00  INFO 5496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2024-09-28T16:58:31.867+09:00  INFO 5496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T16:58:31.883+09:00  INFO 5496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T16:58:31.884+09:00  INFO 5496 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T16:58:31.964+09:00  INFO 5496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T16:58:31.964+09:00  INFO 5496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2704 ms
+2024-09-28T16:58:32.372+09:00  INFO 5496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T16:58:32.495+09:00  INFO 5496 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@269c308e
+2024-09-28T16:58:32.498+09:00  INFO 5496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T16:58:32.567+09:00  INFO 5496 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T16:58:32.625+09:00  INFO 5496 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T16:58:32.672+09:00  INFO 5496 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T16:58:33.117+09:00  INFO 5496 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T16:58:34.388+09:00  INFO 5496 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T16:58:34.513+09:00  INFO 5496 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T16:58:35.276+09:00  WARN 5496 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-28T16:58:35.336+09:00  INFO 5496 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-09-28T16:58:36.023+09:00  INFO 5496 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2024-09-28T16:58:36.723+09:00  INFO 5496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-28T16:58:36.817+09:00  INFO 5496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-28T16:58:36.839+09:00  INFO 5496 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Started KopmorningApplication in 8.258 seconds (process running for 8.816)
+2024-09-28T16:58:36.985+09:00  WARN 5496 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=KOP-MORNING, managementUrl=http://localhost:8080/actuator, healthUrl=http://localhost:8080/actuator/health, serviceUrl=http://localhost:8080) at spring-boot-admin ([http://localhost:8081/instances]): I/O error on POST request for "http://localhost:8081/instances": Connection refused: no further information. Further attempts are logged on DEBUG level
+2024-09-28T17:00:08.204+09:00  INFO 5496 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T17:00:08.234+09:00  INFO 5496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T17:00:08.251+09:00  INFO 5496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-28T17:00:13.138+09:00  INFO 300 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Starting KopmorningApplication using Java 17.0.10 with PID 300 (C:\Users\wnsgh\Kopmorning\Kopmorning\Kopmorning\out\production\classes started by wnsgh in C:\Users\wnsgh\Kopmorning\Kopmorning)
+2024-09-28T17:00:13.142+09:00  INFO 300 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-28T17:00:13.211+09:00  INFO 300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-28T17:00:13.211+09:00  INFO 300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-28T17:00:14.177+09:00  INFO 300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-28T17:00:14.245+09:00  INFO 300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2024-09-28T17:00:15.947+09:00  INFO 300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-28T17:00:15.961+09:00  INFO 300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-28T17:00:15.961+09:00  INFO 300 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-28T17:00:16.034+09:00  INFO 300 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-28T17:00:16.035+09:00  INFO 300 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2823 ms
+2024-09-28T17:00:16.466+09:00  INFO 300 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-28T17:00:16.574+09:00  INFO 300 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@568353b1
+2024-09-28T17:00:16.577+09:00  INFO 300 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-28T17:00:16.629+09:00  INFO 300 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-28T17:00:16.700+09:00  INFO 300 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-28T17:00:16.753+09:00  INFO 300 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-28T17:00:17.175+09:00  INFO 300 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-28T17:00:18.416+09:00  INFO 300 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-28T17:00:18.520+09:00  INFO 300 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T17:00:19.192+09:00  WARN 300 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-28T17:00:19.237+09:00  INFO 300 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-09-28T17:00:19.837+09:00  INFO 300 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2024-09-28T17:00:20.392+09:00  INFO 300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-28T17:00:20.467+09:00  INFO 300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-28T17:00:20.490+09:00  INFO 300 --- [restartedMain] c.j.Kopmorning.KopmorningApplication     : Started KopmorningApplication in 7.962 seconds (process running for 8.499)
+2024-09-28T17:00:20.629+09:00  WARN 300 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=KOP-MORNING, managementUrl=http://localhost:8080/actuator, healthUrl=http://localhost:8080/actuator/health, serviceUrl=http://localhost:8080) at spring-boot-admin ([http://localhost:8081/instances]): I/O error on POST request for "http://localhost:8081/instances": Connection refused: no further information. Further attempts are logged on DEBUG level
+2024-09-28T17:01:17.181+09:00  INFO 300 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-28T17:01:17.181+09:00  INFO 300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-28T17:01:17.190+09:00  INFO 300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

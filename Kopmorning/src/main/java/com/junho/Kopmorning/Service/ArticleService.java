@@ -5,13 +5,10 @@ import com.junho.Kopmorning.Config.SecurityUtil;
 import com.junho.Kopmorning.DTO.ArticleListResponseDTO;
 import com.junho.Kopmorning.DTO.ArticleResponseDTO;
 import com.junho.Kopmorning.DTO.PageResponseDTO;
-import com.junho.Kopmorning.DTO.RecommendDTO;
 import com.junho.Kopmorning.Domain.Article;
 import com.junho.Kopmorning.Domain.Member;
-import com.junho.Kopmorning.Domain.Recommend;
 import com.junho.Kopmorning.Repository.ArticleRepository;
 import com.junho.Kopmorning.Repository.MemberRepository;
-import com.junho.Kopmorning.Repository.RecommendRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -30,7 +27,6 @@ import java.util.stream.Collectors;
 public class ArticleService {
     private final ArticleRepository articleRepository;
     private final MemberRepository memberRepository;
-    private final RecommendRepository recommendRepository;
 
     public List<ArticleListResponseDTO> findAll(){
         List<Article> articles = articleRepository.findAll();

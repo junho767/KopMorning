@@ -7,13 +7,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 import static com.junho.Kopmorning.Domain.QArticle.article;
 
+@Repository
 @RequiredArgsConstructor
-public class ArticleRepositorylmpl implements ArticleRepositoryCustom{
+public class ArticleRepositoryImpl implements ArticleRepositoryCustom{
     private final JPAQueryFactory queryFactory;
 
     @Override
