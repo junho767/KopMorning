@@ -80,4 +80,4 @@ const DELETE = async ( url:string, header:{} ) => {
   return response;
 };
 
-export { GET, POST, PUT, DELETE }
+export { GET, POST, PUT, DELETE };
