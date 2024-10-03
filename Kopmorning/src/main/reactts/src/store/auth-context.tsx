@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 // auth-action 에서 exported(내보낸) 항목을 모두 가져온다. 이름을 authAction 으로!
-import * as authAction from '../auth/auth-action';
+import * as authAction from './auth-action';
 
 let logoutTimer : NodeJS.Timeout;
 

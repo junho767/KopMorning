@@ -1,4 +1,4 @@
-import { GET, POST }  from "./fetch-auth-action";
+import { GET, POST }  from "./fetch-action";
 
 // 토큰 생성 함수, auth-action 에서만 사용 가능
 const createTokenHeader = (token:string) => {
@@ -93,3 +93,5 @@ export const changePasswordActionHandler = (
   const response = POST(URL, changePasswordObj, createTokenHeader(token));
   return response;
 }
+
+export {};
