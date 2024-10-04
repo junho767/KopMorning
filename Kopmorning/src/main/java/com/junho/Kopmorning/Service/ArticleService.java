@@ -40,9 +40,9 @@ public class ArticleService {
     public ArticleResponseDTO getArticle(Long id){
         Article article = articleRepository.findById(id).orElseThrow(()-> new RuntimeException("존재하지 않는 게시물 입니다."));
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if(authentication == null || authentication.getPrincipal() == "anonymous"){
+        if(authentication == null || authentication.getPrincipal() == "anonymousUser"){
             return ArticleResponseDTO.of(article, false);
-        } else{
+        } else {
             Member member = memberRepository.findById(Long.parseLong(authentication.getName())).orElseThrow(()->new RuntimeException("존재하지 않는 회원 입니다."));
             boolean result = article.getMember().equals(member);
             return ArticleResponseDTO.of(article, result);
