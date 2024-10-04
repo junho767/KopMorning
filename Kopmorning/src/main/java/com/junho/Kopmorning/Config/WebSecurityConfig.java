@@ -7,6 +7,7 @@ import com.junho.Kopmorning.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -45,8 +46,11 @@ public class WebSecurityConfig {
         // 경로별 인가 작업
         http
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/","/auth/**","/article/**","/recommend/**","/comment/**").permitAll()
-                        .anyRequest().authenticated() /// 그 외의 모든 요청에 대해 인증 요구
+                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/article/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/comment/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/recommend/**").permitAll()
+                        .anyRequest().authenticated()
                 );
         // 인증되지 않은 사용자가 보호된 리소스에 접근하려고 할 때 처리방법
         http.exceptionHandling((auth)->auth
