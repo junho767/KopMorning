@@ -24,7 +24,7 @@ public class ArticleController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<ArticleResponseDTO> postArticle(@RequestBody NewArticleRequestDTO requestDTO){
+    public ResponseEntity<ArticleResponseDTO> postArticle(@RequestBody CreateArticleRequestDTO requestDTO){
         return ResponseEntity.ok(articleService.postArticle(requestDTO.getTitle(), requestDTO.getContent()));
     }
 
