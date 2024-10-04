@@ -27,7 +27,7 @@ const AuthContext = React.createContext({
 });
 
 
-export const AuthContextProvider:React.FC<Props> = (Progs) => {
+export const AuthContextProvider:React.FC<Props> = (Props) => {
     const tokenData = authAction.retrieveStoredToken();
 
     let initialToken : any;
@@ -56,7 +56,6 @@ export const AuthContextProvider:React.FC<Props> = (Progs) => {
 
     const loginHandler = ( email : string, password : string) => {
         setIsSuccess(false);
-
         const data = authAction.loginActionHandler(email, password);
         data.then((result) => {
             if(result !== null) {
@@ -67,7 +66,7 @@ export const AuthContextProvider:React.FC<Props> = (Progs) => {
                     authAction.loginTokenHandler(loginData.accessToken, loginData.tokenExpiresIn)
                 );
                 setIsSuccess(true);
-                console.log(isSuccess);
+                console.log("auth_context: 성공");
             }   
         })
     };
@@ -140,7 +139,7 @@ export const AuthContextProvider:React.FC<Props> = (Progs) => {
 
     return(
         <AuthContext.Provider value={contextValue}>
-            {Progs.children}
+            {Props.children}
         </AuthContext.Provider>
     )
 }

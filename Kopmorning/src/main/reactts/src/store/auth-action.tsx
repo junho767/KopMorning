@@ -2,11 +2,11 @@ import { GET, POST }  from "./fetch-action";
 
 // 토큰 생성 함수, auth-action 에서만 사용 가능
 const createTokenHeader = (token:string) => {
-  return {
-    headers: {
-      'Authorization': 'Bearer ' + token
+    return {
+        headers: {
+            'Authorization': 'Bearer ' + token
+        }
     }
-  }
 }
 // 토큰의 만료시간을 계싼하는 함수, auth-action 에서만 사용 가능
 const calculateRemainingTime = (expirationTime:number) => {
