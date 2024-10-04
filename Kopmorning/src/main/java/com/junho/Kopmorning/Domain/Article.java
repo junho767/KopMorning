@@ -16,7 +16,7 @@ import java.util.List;
 @Builder // 빌더 패턴 제공
 @AllArgsConstructor // 모든 필드를 파라미터로 받는 생성자를 자동 생성
 @NoArgsConstructor // 파라미터가 없는 기본 생성자를 자동 생성
-@Table(name="Article")
+@Table(name="ArticleForm.tsx")
 public class Article {
 
     @Id
