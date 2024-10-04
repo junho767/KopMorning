@@ -1,0 +1,54 @@
+/* Article.module.css */
+
+.article {
+  padding: 1.5rem; /* 내부 여백 */
+  background-color: #fff; /* 배경색 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  margin-bottom: 1.5rem; /* 아래 여백 */
+}
+
+.article header {
+  border-bottom: 2px solid #007bff; /* 제목 아래 경계선 */
+  margin-bottom: 1rem; /* 제목 아래 여백 */
+}
+
+.article h4 {
+  font-size: 1.8rem; /* 제목 크기 */
+  color: #333; /* 제목 색상 */
+}
+
+.article span {
+  font-size: 1rem; /* 작성자 및 날짜 크기 */
+  color: #666; /* 작성자 및 날짜 색상 */
+}
+
+.article div {
+  margin-bottom: 1.5rem; /* 본문 아래 여백 */
+  font-size: 1.125rem; /* 본문 크기 */
+  line-height: 1.6; /* 줄 간격 */
+  color: #444; /* 본문 색상 */
+}
+
+.article button {
+  padding: 0.5rem 1rem; /* 버튼 내부 여백 */
+  border: none; /* 테두리 없음 */
+  border-radius: 5px; /* 버튼 모서리 둥글게 */
+  background-color: #007bff; /* 기본 버튼 배경색 */
+  color: white; /* 버튼 텍스트 색상 */
+  cursor: pointer; /* 포인터 커서 */
+  transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
+  margin-right: 0.5rem; /* 버튼 간격 */
+}
+
+.article button:hover {
+  background-color: #0056b3; /* 버튼 호버 색상 */
+}
+
+.article .delete {
+  background-color: #dc3545; /* 삭제 버튼 배경색 */
+}
+
+.article .delete:hover {
+  background-color: #c82333; /* 삭제 버튼 호버 색상 */
+}

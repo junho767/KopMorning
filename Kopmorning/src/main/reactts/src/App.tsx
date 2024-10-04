@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import ArticleListPage from './pages/ArticleListPage';
 import ArticleOnePage from './pages/ArticleOnePage';
 import PutArticlePage from './pages/PutArticlePage';
+import CreateArticlePage from './pages/CreateArticlePage';
 import ProfilePage from './pages/ProfilePage';
 import AuthContext from './store/auth-context';
 import logo from './logo.svg';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/putArticle/:articleId"
           element={authCtx.isLoggedIn ? <PutArticlePage/> : <Navigate to ='/'/>}
           />
+        <Route path="/postArticle/" element={<CreateArticlePage/>}/>
         <Route path="/article/:articleId" element={<ArticleOnePage/>}/>
         <Route path="/login/*"
           element={authCtx.isLoggedIn ? <Navigate to='/' /> : <AuthPage />}

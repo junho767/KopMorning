@@ -3,13 +3,13 @@ import * as articleAction from './article-action';
 
 type Props = {children? : React.ReactNode}
 type ArticleInfo = {
-    articleId : number;
-    memberNickname : string,
-    title : string,
-    body : string,
-    createdAt : string,
-    updatedAt? : string,
-    isWritten? : boolean
+  articleId: number,
+  memberNickname: string,
+  articleTitle: string,
+  articleBody: string,
+  cratedAt: string,
+  updatedAt?: string,
+  isWritten?: boolean
 };
 
 interface PostArticle{

@@ -16,14 +16,14 @@ const MainNavigation = () => {
 
     useEffect(() => {
         if(isLogin) {
-            console.log('start');
+            console.log('로그인 시작');
             authCtx.getUser();
         }
     }, [isLogin]); // 의존성 배열 [isLogin]
 
     useEffect(() => {
         if(isGet) {
-            console.log('get start');
+            console.log('로그인 성공');
             callback(authCtx.userObj.nickname);
         }
     }, [isGet]);
@@ -34,7 +34,8 @@ const MainNavigation = () => {
 
     return(
         <header className = {classes.header}>
-            <Link to ='/'><div className={classes.logo}> Home </div></Link>
+            <Link to ='/'><div className={classes.logo}> 메인화면 </div></Link>
+            <Link to ='/page/1'><div className={classes.articleLink}>게시판</div></Link>
             <nav>
                 <ul>
                     <li>{!isLogin && <Link to='/login'>로그인</Link>}</li>

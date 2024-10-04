@@ -8,12 +8,11 @@ interface PostArticle{
 
 const createToken = (token : string) =>{
     return{
-        header:{
-            'Authorization': 'Bearer' + token
+        headers:{
+            'Authorization': 'Bearer ' + token
         }
     }
 }
-
 export const getPageList = (param : string) =>{
     const URL = '/article/page?page='+param;
     const response = GET(URL, {});
