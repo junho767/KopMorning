@@ -14,8 +14,8 @@ type ArticleInfo = {
   articleId: number,
   memberNickname: string,
   articleTitle: string,
-  articleBody: string,
-  cratedAt: string,
+  articleBody?: string,
+  createdAt: string,
   updatedAt?: string,
   isWritten?: boolean
 };
@@ -91,7 +91,7 @@ const ArticleList:React.FC<Props> = (props) => {
 
   return (
     <div className={classes.list}>
-      <BootStrapTable keyField='id' data = { AList } columns={ columns } />
+      <BootStrapTable keyField='articleId' data = { AList } columns={ columns } />
       <div>{isLogin &&
         <Link to="/postArticle">
           <Button>글 작성</Button>
