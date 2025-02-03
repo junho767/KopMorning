@@ -7,12 +7,14 @@ import java.time.LocalDateTime;
 
 @Getter
 public class MemberDto {
-    private long id;
-    private LocalDateTime createdAt;
-    private LocalDateTime lastLoginAt;
+    private final long id;
+    private final LocalDateTime createdAt;
+    private final LocalDateTime lastLoginAt;
+    private final String nickName;
 
     public MemberDto(Member member) {
         this.id = member.getId();
+        this.nickName = member.getNickName();
         this.createdAt = member.getCreatedDate();
         this.lastLoginAt = member.getLastLoginDate();
     }

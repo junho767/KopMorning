@@ -4,6 +4,7 @@ import com.football.KopMorning.auth.member.domain.Member;
 import com.football.KopMorning.auth.member.dto.MemberDto;
 import com.football.KopMorning.auth.member.service.MemberService;
 import com.football.KopMorning.global.entity.RsData;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
@@ -21,7 +22,7 @@ public class AuthApiController {
                             @NotBlank @Length(min = 3)String password){}
 
     @PostMapping("/join")
-    public RsData<MemberDto> signUp(@RequestBody memberRequestDto requestDto) {
+    public RsData<MemberDto> signUp(@RequestBody @Valid memberRequestDto requestDto) {
         Member member = memberService.join(requestDto.email, requestDto.password);
         return new RsData<>(
                 "200-1",

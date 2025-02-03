@@ -9,12 +9,17 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class MemberService {
     private final MemberRepository memberRepository;
+    private final RandNicknameService randNicknameService;
 
     public Member join(String email, String password) {
+        String randNickname = randNicknameService.randNickname();
+
         Member member = Member.builder()
                 .email(email)
                 .password(password)
+                .nickName(randNickname)
                 .build();
+
         return memberRepository.save(member);
     }
 }
